@@ -1,0 +1,312 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+  overflow: scroll;
+  margin: 0;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+
+div.row.justify-content-md-center{
+  width: auto;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+div.row.justify-content-md-center .col-md-2{
+  margin: 0%;
+  width: auto;
+  align-items: center;
+}
+
+div.git-card{
+  margin-bottom: 1%;
+}
+
+.container-img img {
+  border-radius: 2%;
+  margin-bottom: 1%;
+  width: 100%;
+  height: 100%;
+}
+
+.botnav {
+  overflow: hidden;
+  background-color: transparent;
+  bottom: 0;
+  position: fixed;
+  opacity: 0.1;
+  width: 100%;
+  font-family: monospace;
+}
+
+.botnav a {
+  font-family: monospace;
+}
+
+@-webkit-keyframes pop-on-hover {
+  50% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+}
+@keyframes pop-on-hover {
+  50% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+}
+.pop-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+
+.pop-on-hover:hover,
+.pop-on-hover:focus,
+.pop-on-hover:active {
+  -webkit-animation-name: pop-on-hover;
+  animation-name: pop-on-hover;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+
+}
+
+.pop-on-hover .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-bottom: 50%;
+}
+
+.pop-on-hover .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.pop-on-hover:hover .tooltiptext {
+  visibility: visible;
+}
+
+.card .container {
+  padding: 0px;
+}
+
+.price {
+  padding: 5px 10px;
+  margin: 10px;
+  display: inline-block;
+  color: #000;
+  background: #ffffff;
+  text-decoration: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.center-bottom-img {
+  position: absolute;
+  bottom: 42%;
+  left: 0%;
+  transform: translate(-15%, -50%);
+}
+
+.center-bottom-img-add {
+  position: absolute;
+  bottom: 42%;
+  left: 22%;
+  transform: translate(-10%, -50%);
+}
+
+.price-more {
+  padding: 5px 10px;
+  margin: 10px;
+  display: inline-block;
+  color: #000;
+  background: #ffffff;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.price-more:hover,
+.price-more:focus,
+.price-more:active {
+  background: #ffc107;
+  color: #000;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.price-more .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 57%;
+  margin-left: -50px;
+  margin-bottom: 22%;
+}
+
+.price-more:hover .tooltiptext {
+  visibility: visible;
+}
+
+.price-more .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 48%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.price-more .tooltiptext span {
+  color: black;
+  width: auto;
+  text-decoration: none;
+  display: block;
+  visibility: hidden;
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.price-more:hover .tooltiptext span{
+  visibility: visible;
+}
+
+.container-img {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+  z-index: 10;
+  border-radius: 2%;
+  opacity: 0.8;
+}
+
+.container-img:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2%;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.8;
+}
+
+.register{
+  padding: 5px 10px;
+  margin: 10px;
+  display: inline-block;
+  color: #000;
+  background: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+a.register:hover{
+  background: #ff84c1;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.registerAcc:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  opacity: 1;
+  border-radius: 0%;
+}
+
+.registerAcc:hover .overlay .text {
+  color: #fff;
+  border-radius: 0%;
+}
+
+.registerAcc:hover .overlay .text iframe{
+  border-radius: 0%;
+}
+
+.card button.login100-form-btn.sendmail{
+  width: 40%;
+}
